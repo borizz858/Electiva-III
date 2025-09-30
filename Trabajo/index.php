@@ -412,7 +412,7 @@ body {
 
                     <div class="user-actions">
                         <button class="btn btn-success" onclick="openModal('agregarProductoModal')">
-                            ➕ Agregar Producto
+                             Agregar Producto
                         </button>
                         <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
                     </div>
@@ -659,3 +659,4 @@ body {
 </body>
 
 </html>
+
