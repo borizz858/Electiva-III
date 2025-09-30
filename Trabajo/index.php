@@ -387,7 +387,7 @@ body {
     <div class="container" id="mainContent" style="display: none;">
         
         <div class="welcome-message">
-            <h1>📦 Catálogo de Productos</h1>
+            <h1> Catálogo de Productos</h1>
             <p>Gestiona y explora nuestro catálogo de productos</p>
         </div>
 
@@ -419,11 +419,11 @@ body {
                 </div>
             <?php else: ?>
                 <!-- Usuario NO logueado -->
-                <h2>🔐 Acceso al Catálogo</h2>
+                <h2> Acceso al Catálogo</h2>
                 <p>Para agregar y gestionar productos, inicia sesión o regístrate</p>
                 <div class="auth-buttons">
                     <button class="btn btn-primary" onclick="openModal('loginModal')">
-                        🔐 Iniciar Sesión
+                         Iniciar Sesión
                     </button>
                     <button class="btn btn-success" onclick="openModal('registerModal')">
                         Registrarse
@@ -437,28 +437,28 @@ body {
             <?php if (isset($errors)): ?>
                 <div class="error-message">
                     <?php foreach ($errors as $error): ?>
-                        <div>❌ <?php echo $error; ?></div>
+                        <div> <?php echo $error; ?></div>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
 
             <?php if (isset($success)): ?>
-                <div class="success">✅ <?php echo $success; ?></div>
+                <div class="success"> <?php echo $success; ?></div>
             <?php endif; ?>
         </div>
 
         <!-- PRODUCTOS -->
         <h2 style="color: white; margin-bottom: 20px; text-align: center;">
-            📦 Todos los Productos (<?php echo count($productos); ?>)
+            Todos los Productos (<?php echo count($productos); ?>)
         </h2>
         <div class="catalog">
             <?php if (empty($productos)): ?>
                 <div style="background: white; padding: 40px; border-radius: 10px; text-align: center; grid-column: 1 / -1;">
-                    <h3>😔 No hay productos en el catálogo</h3>
+                    <h3> No hay productos en el catálogo</h3>
                     <p>Sé el primero en agregar un producto al catálogo</p>
                     <?php if (!isset($_SESSION['user_id'])): ?>
                         <button class="btn btn-success" onclick="openModal('loginModal')" style="margin-top: 15px;">
-                            🔐 Iniciar Sesión para Agregar
+                             Iniciar Sesión para Agregar
                         </button>
                     <?php endif; ?>
                 </div>
@@ -482,11 +482,11 @@ body {
                                 <a href="products.php?eliminar=<?php echo $producto['id']; ?>" 
                                    class="btn btn-danger btn-small"
                                    onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?')">
-                                    🗑️ Eliminar
+                                     Eliminar
                                 </a>
                             <?php elseif (!isset($_SESSION['user_id'])): ?>
                                 <button class="btn btn-primary btn-small" onclick="openModal('loginModal')">
-                                    🔐 Iniciar Sesión
+                                     Iniciar Sesión
                                 </button>
                             <?php else: ?>
                                 <span style="color: #666; font-size: 14px;">Producto de otro usuario</span>
@@ -501,7 +501,7 @@ body {
     <!-- Registro -->
     <div id="registerModal" class="modal">
         <div class="modal-content">
-            <h2>📝 Registro</h2>
+            <h2> Registro</h2>
             <form id="registerForm" action="register.php" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
@@ -532,7 +532,7 @@ body {
     <!--  Login -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
-            <h2>🔐 Iniciar Sesión</h2>
+            <h2> Iniciar Sesión</h2>
             <form id="loginForm" action="login.php" method="POST">
                 <div class="form-group">
                     <label for="login_email">Email:</label>
@@ -657,4 +657,5 @@ body {
         <?php endif; ?>
     </script>
 </body>
+
 </html>
