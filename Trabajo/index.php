@@ -391,10 +391,10 @@ body {
             <p>Gestiona y explora nuestro catálogo de productos</p>
         </div>
 
-        <!-- AUTENTICACIÓN -->
+        
         <div class="auth-section">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <!-- logueado -->
+               
                 <div class="success">
                     <h3> ¡Hola, <?php echo $_SESSION['user_name']; ?>!</h3>
                     <p>Puedes agregar nuevos productos al catálogo y gestionar tus productos.</p>
@@ -447,7 +447,7 @@ body {
             <?php endif; ?>
         </div>
 
-        <!-- PRODUCTOS -->
+        
         <h2 style="color: white; margin-bottom: 20px; text-align: center;">
             Todos los Productos (<?php echo count($productos); ?>)
         </h2>
@@ -498,7 +498,7 @@ body {
         </div>
     </div>
 
-    <!-- Registro -->
+   
     <div id="registerModal" class="modal">
         <div class="modal-content">
             <h2> Registro</h2>
@@ -529,7 +529,7 @@ body {
         </div>
     </div>
 
-    <!--  Login -->
+    
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <h2> Iniciar Sesión</h2>
@@ -548,7 +548,7 @@ body {
         </div>
     </div>
 
-    <!-- Modal para Agregar Producto -->
+    
     <div id="agregarProductoModal" class="modal">
         <div class="modal-content">
             <h2> Agregar Nuevo Producto</h2>
@@ -576,7 +576,7 @@ body {
     </div>
 
     <script>
-        // Simular carga de página
+      
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loadingPage').style.opacity = '0';
@@ -641,14 +641,14 @@ body {
             }
         });
 
-        //  Esto me sirve para cerrar modal al hacer clic fuera
+        
         window.onclick = function(event) {
             if (event.target.className === 'modal') {
                 event.target.style.display = 'none';
             }
         }
 
-        // Esto me sirve para mostrar modales automáticamente si hay errores
+       
         <?php if (isset($_SESSION['form_data'])): ?>
             document.addEventListener('DOMContentLoaded', function() {
                 openModal('registerModal');
@@ -659,4 +659,5 @@ body {
 </body>
 
 </html>
+
 
